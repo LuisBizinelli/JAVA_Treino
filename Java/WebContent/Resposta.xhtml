@@ -5,11 +5,34 @@
       xmlns:h="http://java.sun.com/jsf/html"> 
 
 <h:head></h:head> 
-<h:body> 
+ <!--  <h:body> 
 
-	matricula: <h:outputText value="#{aluno.matricula}" />	<br/>
-	nome: <h:outputText value="#{aluno.nome}" /> 	<br/>
-	sobrenome: <h:outputText value="#{aluno.sobrenome}" />	<br/>
+	matricula: <h:outputText value="#{alunoBB.aluno.matricula}" />	<br/>
+	nome: <h:outputText value="#{alunoBB.aluno.nome}" /> 	<br/>
+	sobrenome: <h:outputText value="#{alunoBB.aluno.sobrenome}" />	<br/>
 
-</h:body> 
+</h:body> -->
+
+<h:body>
+<h:form>
+<h:dataTable value = "#{alunoBB.alunos}" var = "a">
+
+<h:column>
+<f:facet name="header">Matricula</f:facet>
+<h:outputText value="#{a.matricula}"/>
+</h:column>
+<h:column>
+<f:facet name="header">nome</f:facet>
+<h:outputText value="#{a.nome}"/>
+</h:column>
+<h:column>
+<f:facet name="header">sobrenome</f:facet>
+<h:outputText value="#{a.sobrenome}"/>
+</h:column>
+
+</h:dataTable>
+
+</h:form>
+</h:body>
+
 </html>

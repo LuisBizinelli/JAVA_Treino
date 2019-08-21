@@ -6,11 +6,12 @@ import javax.inject.Named;
 @Named
 @RequestScoped
 
-public class aluno {
+public class Aluno {
 
 	private String matricula;
 	private String nome;
 	private String sobrenome;
+	
 	public String getMatricula() {
 		return matricula;
 	}
